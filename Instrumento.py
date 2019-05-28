@@ -6,13 +6,6 @@ class Instrumento:
         self.afinacion = afinacion
         self.melodia = armonia
 
-    def cuerdas(self, ncuerdas, afinacion_cuerda):
-        self.ncuerdas = ncuerdas
-        self.afinacion_cuerda = afinacion_cuerda
-
-        if ncuerdas < 0:
-            raise ValueError('No deben haber cuerdas negativas')
-        return f'{self.nombreinstrumento} tiene {ncuerdas} cuerdas y estan afinadas en {afinacion_cuerda}'
 
     def percuxion(self, frecuencia, diametro):
         self.frecuencia = frecuencia
@@ -28,6 +21,15 @@ class Instrumento:
             raise ValueError('Deben haber cantidades positivas')
         else:
             return f'{self.nombreinstrumento} cuenta con {numero} ejemplares'
+
+    def cuerdas(self, ncuerdas, afinacion_cuerda):
+        self.ncuerdas = ncuerdas
+        self.afinacion_cuerda = afinacion_cuerda
+
+        if ncuerdas < 0:
+            raise ValueError('No deben haber cuerdas negativas')
+        return f'{self.nombreinstrumento} tiene {ncuerdas} cuerdas y estan afinadas en {afinacion_cuerda}'
+
 
 bateria = Instrumento('Bateria', 'I', 'Flauta', 'F')
 guitarra = Instrumento('Guitarra', 'G', 'Piano', 'P')
