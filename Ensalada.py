@@ -11,6 +11,6 @@ class Ensalada(Fruta):
         ensalada = cantidad_ensalada / self.__TIPOS__[self.sabor][1]
         super(ensalada, self).cortar(ensalada)
         self.cantidad += super(ensalada, self).licuar(ensalada)
-        return f'Se realizo {ensalada} cantidad de {self.sabor} sabor'
+        return f'Se realizo {ensalada} cantidad de {self.sabor} sabor '
 
 
